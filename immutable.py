@@ -11,7 +11,6 @@ class HashMap(object):
         for i in range(size):
             self.data.append([])
 
-    # 11.iteration and __next__
     def __iter__(self):
         return self
 
