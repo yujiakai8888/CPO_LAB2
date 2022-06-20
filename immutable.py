@@ -1,4 +1,6 @@
 import copy
+
+
 class HashMap(object):
 
     def __init__(self, size=5):
@@ -55,7 +57,7 @@ def cons(key, hashmap):
 # 2. remove
 def remove(hashmap, key):
     new = HashMap()
-    new.data=copy.deepcopy(hashmap.data)
+    new.data = copy.deepcopy(hashmap.data)
     new.len = hashmap.len
     new.keynumber = hashmap.keynumber
     new.__curr__ = hashmap.__curr__

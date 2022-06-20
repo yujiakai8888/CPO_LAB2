@@ -2,7 +2,7 @@ import unittest
 from hypothesis import given
 import hypothesis.strategies as st
 from immutable import HashMap, cons, length, remove, member, intersection, \
-                      to_list, from_list, concat, map, filter,reduce, monoid_add
+            to_list, from_list, concat, map, filter, reduce, monoid_add
 
 
 class TestMutableHashMap(unittest.TestCase):
@@ -39,7 +39,8 @@ class TestMutableHashMapMethods(TestMutableHashMap):
         self.assertTrue(to_list(l1) == [None, 1] or to_list(l1) == [1, None])
         self.assertEqual(to_list(l1), to_list(from_list([None, 1])))
         self.assertEqual(to_list(l1), to_list(from_list([1, None, 1])))
-        self.assertEqual(to_list(concat(l1, l2)), to_list(from_list([None, 1, 1, None])))
+        self.assertEqual(to_list(concat(l1, l2)),
+                         to_list(from_list([None, 1, 1, None])))
         lst = to_list(l1) + to_list(l2)
         for e in l1:
             lst.remove(e)
